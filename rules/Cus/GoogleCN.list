@@ -1,8 +1,8 @@
-DOMAIN-SUFFIX,blog.google
+#DOMAIN-SUFFIX,blog.google
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN,translate.googleapis.com
-DOMAIN,update.googleapis.com
-DOMAIN,fonts.googleapis.com
+#DOMAIN,update.googleapis.com
+#DOMAIN,fonts.googleapis.com
 DOMAIN,clientservices.googleapis.com
 DOMAIN,dl.google.com
 DOMAIN,dl.l.google.com
