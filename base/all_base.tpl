@@ -6,6 +6,10 @@ allow-lan: {{ default(global.clash.allow_lan, "true") }}
 mode: Rule
 log-level: {{ default(global.clash.log_level, "info") }}
 external-controller: :9090
+{% if default(request.ui, "") == "1" %}
+external-ui: ./yacd
+{% endif %} 
+
 {% if default(request.dns, "") == "1" %}
 dns:
   enable: true
