@@ -1,0 +1,10 @@
+--- a
++++ b
+@@ -73,7 +73,7 @@
+   - name: ⚖️ 轮询
+     type: load-balance
+-    strategy: consistent-hashing
++    strategy: round-robin
+     url: http://www.google.com/generate_204
+     interval: 180
+     proxies:
