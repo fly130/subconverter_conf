@@ -6,3 +6,4 @@ PROCESS-NAME, aria2c
 PROCESS-PATH, /usr/bin/curl
 PROCESS-PATH, /usr/bin/wget
 PROCESS-PATH, /usr/bin/aria2c
+DOMAIN-KEYWORD, torrent
