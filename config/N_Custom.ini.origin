@@ -27,6 +27,7 @@ ruleset=🎯 全球直连,rules/LocalAreaNetwork.list
 ruleset=🎯 全球直连,rules/ACL4SSR/Clash/LocalAreaNetwork.list
 ruleset=🌎 Linux,rules/Cus/Linux.list
 ruleset=🗺️ OneDrive,rules/ACL4SSR/Clash/OneDrive.list
+ruleset=Ⓜ️ 微软服务,rules/Cus/Microsoft.list
 ruleset=Ⓜ️ 微软服务,rules/ACL4SSR/Clash/Microsoft.list
 ruleset=🛑 全球拦截,rules/ACL4SSR/Clash/BanAD.list
 ruleset=🛑 全球拦截,rules/ACL4SSR/Clash/BanEasyList.list
