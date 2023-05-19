@@ -7,20 +7,33 @@ mode: Rule
 log-level: {{ default(global.clash.log_level, "info") }}
 external-controller: :9090
 {% if default(request.ui, "") == "1" %}
-external-ui: ./yacd
+external-ui: yacd
 {% endif %} 
 
 {% if default(request.dns, "") == "1" %}
 dns:
   enable: true
   ipv6: false
-  default-nameserver: [223.5.5.5, 119.29.29.29,114.114.114.114]
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
-  nameserver: ['https://dns.alidns.com/dns-query', 'tls://dns.alidns.com', 'https://doh.pub/dns-query']
-  fallback: ['tls://dns.quad9.net', 'tls://1.1.1.1', 'tls://dns.google', 'https://1.0.0.1/dns-query', 'https://dns.google/dns-query', 'https://cloudflare-dns.com/dns-query', '9.9.9.9', '8.8.8.8']
-  fallback-filter: { geoip: true, geoip-code: CN, ipcidr: [240.0.0.0/4] }
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 101.198.199.200
+  nameserver:
+    - tls://dns.alidns.com
+    - https://doh.pub/dns-query
+    - https://doh.360.cn/dns-query
+  fallback:
+    - tls://1.1.1.1
+    - tls://dns.google
+    - https://cloudflare-dns.com/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
 {% endif %}
 {% if default(request.tun, "") == "1" %}
 tun:

@@ -1,0 +1,20 @@
+tls://1.1.1.1
+tls://dns.google
+
+https://1.0.0.1/dns-query
+https://one.one.one.one/dns-query
+https://cloudflare-dns.com/dns-query
+https://dns.google/dns-query
+
+https://doh.opendns.com/dns-query
+
+https://dns.adguard-dns.com/dns-query
+tls://unfiltered.adguard-dns.com
+
+https://dns.quad9.net/dns-query
+
+
+https://1.1.1.1/help
+https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/make-api-requests
+dig @1.1.1.1 +tls-ca +tls-host=cloudflare-dns.com  google.com
+curl --http2 -H "accept: application/dns-json" "https://1.1.1.1/dns-query?name=cloudflare.com" --next --http2 -H "accept: application/dns-json" "https://1.1.1.1/dns-query?name=google.com"
