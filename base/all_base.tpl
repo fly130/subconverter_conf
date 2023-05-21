@@ -3,14 +3,17 @@
 port: {{ default(global.clash.http_port, "7890") }}
 socks-port: {{ default(global.clash.socks_port, "7891") }}
 allow-lan: {{ default(global.clash.allow_lan, "true") }}
-mode: Rule
+mode: rule
 log-level: {{ default(global.clash.log_level, "info") }}
 external-controller: :9090
 {% if default(request.ui, "") == "1" %}
 external-ui: yacd
-{% endif %} 
+{% endif %}
 
 {% if default(request.dns, "") == "1" %}
+hosts:
+  '*.registeridm.com': 127.0.0.1
+  '*.internetdownloadmanager.com': 127.0.0.1
 dns:
   enable: true
   ipv6: false
